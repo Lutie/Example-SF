@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello World !!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/helloworld.css') }}"  type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+    {% if error is not null %}
+        <div>{{ error }}</div>
+    {% else %}
+        <div>Hello {{ player.name }} !!!</div>
+        <div>Tu as encore {{ player.hp }} HP restants !</div>
+        {% if player.hp < player.maxhp / 2 %}
+            <div>Tu es en danger !</div>
+        {% else %}
+            <div>Tu as encore de la marge !</div>
+        {% endif %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background: orangered;
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+}
